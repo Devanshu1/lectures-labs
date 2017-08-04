@@ -22,13 +22,14 @@ a new branch for your work on the next question!
 
 */
 
-// Write your code here
 function sum(a,b){ //eslint-disable-line
-
+    var total = a + b;
+    return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
+    // returns array first element = sum, second = string like example
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 
 
@@ -54,11 +55,11 @@ create a new branch for your work on the next question!
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+    return [(a*b), 'The product of ' + a + ' and ' + b + ' is 45.'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 
 /////////////////////////////////////
@@ -92,11 +93,14 @@ new branch for your work on the next question!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+var total = sum(a,b); 
+var times = multiply(a,b);
+return[sum(total, c), multiply(times, c), a + ' and ' + b + ' and ' + c 
+    + ' sum to 16.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is 140.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
@@ -126,7 +130,7 @@ new branch for your work on the next question!
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+// TEST CHANGE
 }
 
 // Here is the test for sumArray(); uncomment it to run it
