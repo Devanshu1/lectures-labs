@@ -93,9 +93,9 @@ new branch for your work on the next question!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-var total = sum(a,b); 
-var times = multiply(a,b);
-return[sum(total, c), multiply(times, c), a + ' and ' + b + ' and ' + c 
+var total = sum(a,b)[0]; 
+var times = multiply(a,b)[0];
+return[sum(total, c)[0], multiply(times, c)[0], a + ' and ' + b + ' and ' + c 
     + ' sum to 16.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is 140.'];
 }
 
@@ -131,15 +131,15 @@ var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
 
-    var total = sum(2,3);
-   return [sum(total, 4), testArray + ' was passed in as an array of numbers, and 9 is their sum.'  ]
+    var total = sum(2,3)[0];
+   return [sum(total, 4)[1], testArray + ' was passed in as an array of numbers, and 9 is their sum.'  ]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 testSumArray(testArray);
 
 
-/////////////////////////////////////
+/////////////////////////////////////five
 /* Problem 5
 Write a function called multiplyArray() that takes an array of numbers
 as its argument and returns an array whose first element 
@@ -165,8 +165,10 @@ new branch for your work on the next question!
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+    var answer = multiply(testArray[0], testArray[1])[0];
+    return [multiply(answer, testArray[2][0]),  'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] +  ' have a product of 24.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray([2,3,4]);
+console.log(multiplyArray([2,3,4]));
